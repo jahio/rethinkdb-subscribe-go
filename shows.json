@@ -1,0 +1,20 @@
+[
+    {
+        "name":"Battlestar Galactica",
+        "website":"https://www.syfy.com/battlestargalactica",
+        "genre":"Science Fiction",
+        "episodes": [
+            { "name":"Daybreak (Part 1)", "summary":"With Galactica on the verge of falling apart, Admiral Adama readies the ship for what could be its final mission, as Baltar's Six warns that humanity's final chapter is near." },
+            { "name":"Daybreak (Part 2)", "summary":"Adama and the Galactica crew stake the survival of the human race on their plan to rescue Hera from the Cylon colony." }                
+        ]
+    },
+    {
+        "name":"12 Monkeys",
+        "genre":"Science Fiction",
+        "website":"https://www.syfy.com/12monkeys",
+        "episodes": [
+            { "name":"The Night Room", "summary":"So here it is 2011, and Jennifer Goines is delivered to the Night Room, a special lab that keeps her daddy's little secret. It's crazy secure and then in 2015, there's Jennifer again, this time with different kidnappers (the Pallid man) -- asking her where it is. Life is funny that way." },
+            { "name":"The Red Forest", "summary":"Picking right up where we left off, in 2015, Cole rushes out to save Cassie from the Army of the 12 Monkeys when he splinters and ends up home in the year 2043 – but to an alternate timeline where it appears the time machine hasn't been fired up in a while." }
+        ]
+    }
+]
