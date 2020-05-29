@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"log"
 
 	r "gopkg.in/rethinkdb/rethinkdb-go.v6"
@@ -31,17 +30,16 @@ func main() {
 	rconn, err := r.Connect(rdbOpts)
 	checkError(err)
 
-	// Make sure you have shows.json in the same directory as this file.
-	file, err := ioutil.ReadFile("shows.json")
-	checkError(err)
+	for {
+		result, err := r.Table("tv_shows").Changes().Run(rconn)
+		checkError(err)
 
-	var shows []show
-	err = json.Unmarshal(file, &shows)
-	checkError(err)
-
-	result, err := r.Table("tv_shows").Insert(shows).RunWrite(rconn)
-	checkError(err)
-	printObj(result)
+		var response interface{}
+		for result.Next(&response) {
+			printObj(response)
+		}
+		checkError(result.Err())
+	}
 
 }
 
